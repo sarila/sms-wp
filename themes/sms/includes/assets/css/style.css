@@ -251,6 +251,98 @@
     left: 0;
 }
 
+/* blog section css start */
+.blog_container{
+    padding: 30px 50px;
+    height: fit-content;
+}
+
+.blog_container .blog_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog_container .blog_header h2{
+    text-transform: capitalize;
+    font-size: 20px;
+    color: #2d4a79;
+}
+.blog_container .blog_header {
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.blog_container .blog_header .blog_section_button button {
+    padding: 5px 10px;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 4px;
+}
+.blog_container .blog_header .blog_section_button button a {
+    color: #2d4a79;
+    font-size: 14px;
+}
+
+/* ....... */
+.blog_container .blog_wrapper{
+    /* border: 2px solid blue; */
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+}
+
+.blog_container .blog_wrapper .blog{
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+} 
+
+.blog_container .blog_wrapper .blog:hover{
+  scale: 0.98;
+  transition: all 500ms ease-in-out;
+} 
+
+.blog_container .blog_wrapper .blog .blog_image{
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    /* border: 2px solid black; */
+    border-radius: 8px;
+}
+.blog_container .blog_wrapper .blog .blog_image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.blog_container .blog_wrapper .blog .blog_detail {
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blog_container .blog_wrapper .blog .blog_detail h3 a {
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+    color: #2d4a79;
+    opacity: 0.9;
+}
+.blog_container .blog_wrapper .blog .blog_detail .date_author {
+    text-transform: capitalize;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* blog section css end */
+
 
 /*** Service ***/
 .service-item {
