@@ -35,7 +35,7 @@ define( 'AI1WM_DEBUG', false );
 // ==================
 // = Plugin Version =
 // ==================
-define( 'AI1WM_VERSION', '7.44' );
+define( 'AI1WM_VERSION', '7.79' );
 
 // ===============
 // = Plugin Name =
@@ -157,10 +157,45 @@ define( 'AI1WM_CONTENT_LIST_NAME', 'content.list' );
 // ===========================
 define( 'AI1WM_MEDIA_LIST_NAME', 'media.list' );
 
+// =============================
+// = Archive Plugins List Name =
+// =============================
+define( 'AI1WM_PLUGINS_LIST_NAME', 'plugins.list' );
+
+// ============================
+// = Archive Themes List Name =
+// ============================
+define( 'AI1WM_THEMES_LIST_NAME', 'themes.list' );
+
 // ============================
 // = Archive Tables List Name =
 // ============================
 define( 'AI1WM_TABLES_LIST_NAME', 'tables.list' );
+
+// =================================
+// = Incremental Content List Name =
+// =================================
+define( 'AI1WM_INCREMENTAL_CONTENT_LIST_NAME', 'incremental.content.list' );
+
+// ===============================
+// = Incremental Media List Name =
+// ===============================
+define( 'AI1WM_INCREMENTAL_MEDIA_LIST_NAME', 'incremental.media.list' );
+
+// =================================
+// = Incremental Plugins List Name =
+// =================================
+define( 'AI1WM_INCREMENTAL_PLUGINS_LIST_NAME', 'incremental.plugins.list' );
+
+// ================================
+// = Incremental Themes List Name =
+// ================================
+define( 'AI1WM_INCREMENTAL_THEMES_LIST_NAME', 'incremental.themes.list' );
+
+// =================================
+// = Incremental Backups List Name =
+// =================================
+define( 'AI1WM_INCREMENTAL_BACKUPS_LIST_NAME', 'incremental.backups.list' );
 
 // =============================
 // = Archive Cookies Text Name =
@@ -181,6 +216,11 @@ define( 'AI1WM_LESS_CACHE_NAME', '.less.cache' );
 // = Elementor CSS Cache Name =
 // ============================
 define( 'AI1WM_ELEMENTOR_CSS_NAME', 'uploads' . DIRECTORY_SEPARATOR . 'elementor' . DIRECTORY_SEPARATOR . 'css' );
+
+// =========================
+// = Themes Functions Name =
+// =========================
+define( 'AI1WM_THEMES_FUNCTIONS_NAME', 'themes' . DIRECTORY_SEPARATOR . 'functions.php' );
 
 // =============================
 // = Endurance Page Cache Name =
@@ -327,6 +367,11 @@ define( 'AI1WM_INITIAL_DB_VERSION', 'initial_db_version' );
 // ============
 define( 'AI1WM_CRON', 'cron' );
 
+// =======================
+// = Backups Path Option =
+// =======================
+define( 'AI1WM_BACKUPS_PATH_OPTION', 'ai1wm_backups_path' );
+
 // ===================
 // = Backups Labels  =
 // ===================
@@ -362,11 +407,6 @@ define( 'AI1WM_MESSAGES', 'ai1wm_messages' );
 // =================
 define( 'AI1WM_SUPPORT_EMAIL', 'support@servmask.com' );
 
-// =================
-// = Max File Size =
-// =================
-define( 'AI1WM_MAX_FILE_SIZE', 2 << 28 );
-
 // ==================
 // = Max Chunk Size =
 // ==================
@@ -376,6 +416,16 @@ define( 'AI1WM_MAX_CHUNK_SIZE', 5 * 1024 * 1024 );
 // = Max Chunk Retries =
 // =====================
 define( 'AI1WM_MAX_CHUNK_RETRIES', 10 );
+
+// ===============
+// = CIPHER NAME =
+// ===============
+define( 'AI1WM_CIPHER_NAME', 'AES-256-CBC' );
+
+// =============
+// = SIGN TEXT =
+// =============
+define( 'AI1WM_SIGN_TEXT', '"How long do you want these messages to remain secret? I want them to remain secret for as long as men are capable of evil." - Neal Stephenson' );
 
 // ===========================
 // = Max Transaction Queries =
@@ -413,10 +463,17 @@ if ( ! defined( 'WP_CONTENT_DIR' ) ) {
 	define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' );
 }
 
+// ========================
+// = Backups Default Path =
+// ========================
+if ( ! defined( 'AI1WM_DEFAULT_BACKUPS_PATH' ) ) {
+	define( 'AI1WM_DEFAULT_BACKUPS_PATH', WP_CONTENT_DIR . DIRECTORY_SEPARATOR . 'ai1wm-backups' );
+}
+
 // ================
 // = Backups Path =
 // ================
-define( 'AI1WM_BACKUPS_PATH', WP_CONTENT_DIR . DIRECTORY_SEPARATOR . 'ai1wm-backups' );
+define( 'AI1WM_BACKUPS_PATH', get_option( AI1WM_BACKUPS_PATH_OPTION, AI1WM_DEFAULT_BACKUPS_PATH ) );
 
 // ==========================
 // = Storage index.php File =
@@ -437,6 +494,11 @@ define( 'AI1WM_BACKUPS_INDEX_PHP', AI1WM_BACKUPS_PATH . DIRECTORY_SEPARATOR . 'i
 // = Backups index.html File =
 // ===========================
 define( 'AI1WM_BACKUPS_INDEX_HTML', AI1WM_BACKUPS_PATH . DIRECTORY_SEPARATOR . 'index.html' );
+
+// ===========================
+// = Backups robots.txt File =
+// ===========================
+define( 'AI1WM_BACKUPS_ROBOTS_TXT', AI1WM_BACKUPS_PATH . DIRECTORY_SEPARATOR . 'robots.txt' );
 
 // ==========================
 // = Backups .htaccess File =
