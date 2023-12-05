@@ -542,58 +542,24 @@
 /* how it works section css end */
 /* stake holder section css start */
 
-.stakeholder_container {
-  height: fit-content;
-  padding: 0px 50px;
-  padding-bottom: 50px;
-}
-
-.stakeholder_container .stakeholders_title {
+.stakeholders_title {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.stakeholder_container .stakeholders_title h2 {
-  font-size: 20px;
+.stakeholders_title h2 {
+  font-size: 24px;
   text-transform: capitalize;
   color: #2d4a79;
 }
-.stakeholder_container .stakeholders_title p {
-  font-size: 15px;
+.stakeholders_title p {
+  font-size: 16px;
   padding: 0px 20px;
   color: #708090;
-}
-.stakeholder_container .stakeholders_wrapper {
-  padding: 30px 0px;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 20px;
-}
-
-.stakeholder_container .stakeholders_wrapper .stakeholder_wrapper {
-  background-color: lightgrey;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 4px;
-}
-.stakeholder_container .stakeholders_wrapper .stakeholder_wrapper h2 {
-  font-size: 17px;
-  color: #ff6b6b;
-}
-.stakeholder_container .stakeholders_wrapper .stakeholder_wrapper p {
-  text-transform: capitalize;
-  opacity: 0.8;
-  font-size: 15px;
-}
-
-/* stake holder section css end */
+  padding-bottom: 20px;
+}/* stake holder section css end */
 /* blog section css start */
 .blog_container {
   padding: 30px 50px;

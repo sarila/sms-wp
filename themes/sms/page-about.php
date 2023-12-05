@@ -55,37 +55,33 @@
     <div class="row g-5">
       <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
         <div class="position-relative h-100">
-          <img class="img-fluid position-absolute w-100 h-100" src="img/about.jpg" alt="" style="object-fit: cover;">
+        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/supportmyschool.jpg" alt="team_image">
         </div>
       </div>
       <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
         <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-        <h1 class="mb-4">Welcome to eLEARNING</h1>
-        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-          eos. Clita erat ipsum et lorem et sit.</p>
-        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-          eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+        <h1 class="mb-4">How Did We Come Together?</h1>
+        <p class="mb-4">Support My School, established in 2023 by five young individuals during an event organized by the Accountability Lab, is a web platform dedicated to fostering transparency and accountability within the education sector. Our mission is to harness the power of technology to drive positive change within Nepal's education system through civic engagement and innovation. <br /><br /> Additionally, we are committed to serving all public schools in Nepal by providing an online platform where they can voice their concerns, share feedback, and collaborate to discover meaningful solutions. We are sticking to following core values</p>
         <div class="row gy-2 gx-4 mb-4">
           <div class="col-sm-6">
-            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Transparency</p>
           </div>
           <div class="col-sm-6">
-            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Accountability</p>
           </div>
           <div class="col-sm-6">
-            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Civic Engagement</p>
           </div>
           <div class="col-sm-6">
-            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>innovation</p>
           </div>
           <div class="col-sm-6">
-            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Equity & Inclusivity</p>
           </div>
           <div class="col-sm-6">
-            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Empowerment</p>
           </div>
         </div>
-        <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
       </div>
     </div>
   </div>
@@ -104,7 +100,8 @@
       <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
         <div class="team-item bg-light">
           <div class="overflow-hidden">
-            <img class="img-fluid" src="img/team-1.jpg" alt="">
+
+        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/team-1.jpg" alt="">
           </div>
           <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
             <div class="bg-light d-flex justify-content-center pt-2 px-1">
