@@ -915,11 +915,12 @@ class Ai1wm_Import_Database {
 			$new_table_prefixes[] = ai1wm_table_prefix() . $table_name;
 		}
 
-		// Since BuddyBoss Platform 2.0, non-multisite configurations have stored signups in
-		// the same way as Multisite configs traditionally have: in the wp_signups table
-		if ( ai1wm_validate_plugin_basename( 'buddyboss-platform/bp-loader.php' ) ) {
-			$old_table_prefixes[] = ai1wm_servmask_prefix( 'mainsite' ) . 'signups';
-			$new_table_prefixes[] = ai1wm_table_prefix() . 'signups';
+		// Set BuddyPress table prefixes
+		if ( ai1wm_validate_plugin_basename( 'buddyboss-platform/bp-loader.php' ) || ai1wm_validate_plugin_basename( 'buddypress/bp-loader.php' ) ) {
+			foreach ( array( 'signups', 'bp_activity', 'bp_activity_meta', 'bp_friends', 'bp_groups', 'bp_groups_groupmeta', 'bp_groups_members', 'bp_invitations', 'bp_messages_messages', 'bp_messages_meta', 'bp_messages_notices', 'bp_messages_recipients', 'bp_notifications', 'bp_notifications_meta', 'bp_optouts', 'bp_user_blogs', 'bp_user_blogs_blogmeta', 'bp_xprofile_data', 'bp_xprofile_fields', 'bp_xprofile_groups', 'bp_xprofile_meta' ) as $table_name ) {
+				$old_table_prefixes[] = ai1wm_servmask_prefix( 'mainsite' ) . $table_name;
+				$new_table_prefixes[] = ai1wm_table_prefix() . $table_name;
+			}
 		}
 
 		// Set base table prefixes
@@ -944,11 +945,7 @@ class Ai1wm_Import_Database {
 
 		// Get database client
 		if ( is_null( $mysql ) ) {
-			if ( empty( $wpdb->use_mysqli ) ) {
-				$mysql = new Ai1wm_Database_Mysql( $wpdb );
-			} else {
-				$mysql = new Ai1wm_Database_Mysqli( $wpdb );
-			}
+			$mysql = Ai1wm_Database_Utility::create_client();
 		}
 
 		// Set database options
@@ -1013,11 +1010,11 @@ class Ai1wm_Import_Database {
 			$params['completed'] = false;
 		}
 
-		// Delete active plugins
-		delete_option( AI1WM_ACTIVE_PLUGINS );
-
 		// Flush WP cache
 		ai1wm_cache_flush();
+
+		// Reset active plugins
+		update_option( AI1WM_ACTIVE_PLUGINS, array() );
 
 		// Activate plugins
 		ai1wm_activate_plugins( ai1wm_active_servmask_plugins() );
@@ -1048,6 +1045,9 @@ class Ai1wm_Import_Database {
 
 		// Set the new sites links
 		update_option( AI1WM_SITES_LINKS, $sites_links );
+
+		// Set new backups path
+		update_option( AI1WM_BACKUPS_PATH_OPTION, AI1WM_BACKUPS_PATH );
 
 		return $params;
 	}

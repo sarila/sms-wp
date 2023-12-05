@@ -38,6 +38,12 @@ function sms_general_customizer_section($wp_customize)
       'default' => ''
     )
   );
+  $wp_customize->add_setting(
+    'sms_instagram_handle',
+    array(
+      'default' => ''
+    )
+  );
 
 
   $wp_customize->add_control(
@@ -93,7 +99,7 @@ function sms_general_customizer_section($wp_customize)
   );
 
   $wp_customize->add_section(
-    'medicust_social_section',
+    'sms_social_section',
     array(
       'title' => __('Social Settings', 'sms'),
       'priority' => 20
@@ -106,7 +112,7 @@ function sms_general_customizer_section($wp_customize)
       'sms_facebook_text',
       array(
         'label' => __('Facebook URL', 'sms'),
-        'section' => 'medicust_social_section',
+        'section' => 'sms_social_section',
         'settings' => 'sms_facebook_handle',
         'description' => __('Enter Facebook link', 'sms'),
         'type' => 'text'
@@ -120,7 +126,7 @@ function sms_general_customizer_section($wp_customize)
       'sms_twitter_text',
       array(
         'label' => __('Twitter URL', 'sms'),
-        'section' => 'medicust_social_section',
+        'section' => 'sms_social_section',
         'settings' => 'sms_twitter_handle',
         'description' => __('Enter twitter link', 'sms'),
         'type' => 'text'
@@ -134,9 +140,23 @@ function sms_general_customizer_section($wp_customize)
       'sms_youtube_text',
       array(
         'label' => __('Youtube URL', 'sms'),
-        'section' => 'medicust_social_section',
+        'section' => 'sms_social_section',
         'settings' => 'sms_youtube_handle',
         'description' => __('Enter Youtube link', 'sms'),
+        'type' => 'text'
+      )
+    )
+  );
+
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      'sms_instagram_text',
+      array(
+        'label' => __('Instagram URL', 'sms'),
+        'section' => 'sms_social_section',
+        'settings' => 'sms_instagram_handle',
+        'description' => __('Enter instagram link', 'sms'),
         'type' => 'text'
       )
     )

@@ -86,6 +86,13 @@ abstract class Ai1wm_Database {
 	protected $new_column_prefixes = array();
 
 	/**
+	 * Reserved column prefixes
+	 *
+	 * @var array
+	 */
+	protected $reserved_column_prefixes = array();
+
+	/**
 	 * Old replace values
 	 *
 	 * @var array
@@ -119,6 +126,13 @@ abstract class Ai1wm_Database {
 	 * @var array
 	 */
 	protected $table_where_query = array();
+
+	/**
+	 * Table select columns
+	 *
+	 * @var array
+	 */
+	protected $table_select_columns = array();
 
 	/**
 	 * Table prefix columns
@@ -299,6 +313,27 @@ abstract class Ai1wm_Database {
 	}
 
 	/**
+	 * Set reserved column prefixes
+	 *
+	 * @param  array  $prefixes List of column prefixes
+	 * @return object
+	 */
+	public function set_reserved_column_prefixes( $prefixes ) {
+		$this->reserved_column_prefixes = $prefixes;
+
+		return $this;
+	}
+
+	/**
+	 * Get reserved column prefixes
+	 *
+	 * @return array
+	 */
+	public function get_reserved_column_prefixes() {
+		return $this->reserved_column_prefixes;
+	}
+
+	/**
 	 * Set old replace values
 	 *
 	 * @param  array  $values List of values
@@ -404,6 +439,33 @@ abstract class Ai1wm_Database {
 	public function get_table_where_query( $table_name ) {
 		if ( isset( $this->table_where_query[ strtolower( $table_name ) ] ) ) {
 			return $this->table_where_query[ strtolower( $table_name ) ];
+		}
+	}
+
+	/**
+	 * Set table select columns
+	 *
+	 * @param  string $table_name   Table name
+	 * @param  array  $column_names Column names
+	 * @return object
+	 */
+	public function set_table_select_columns( $table_name, $column_names ) {
+		foreach ( $column_names as $column_name => $column_expression ) {
+			$this->table_select_columns[ strtolower( $table_name ) ][ strtolower( $column_name ) ] = $column_expression;
+		}
+
+		return $this;
+	}
+
+	/**
+	 * Get table select columns
+	 *
+	 * @param  string $table_name Table name
+	 * @return array
+	 */
+	public function get_table_select_columns( $table_name ) {
+		if ( isset( $this->table_select_columns[ strtolower( $table_name ) ] ) ) {
+			return $this->table_select_columns[ strtolower( $table_name ) ];
 		}
 	}
 
@@ -827,8 +889,8 @@ abstract class Ai1wm_Database {
 					// Get primary keys
 					$primary_keys = $this->get_primary_keys( $table_name );
 
-					// Get table columns
-					$table_columns = $this->get_column_types( $table_name );
+					// Get column types
+					$column_types = $this->get_column_types( $table_name );
 
 					// Get prefix columns
 					$prefix_columns = $this->get_table_prefix_columns( $table_name );
@@ -851,8 +913,15 @@ abstract class Ai1wm_Database {
 								$table_where = 1;
 							}
 
+							// Set table select columns
+							if ( ! ( $select_columns = $this->get_table_select_columns( $table_name ) ) ) {
+								$select_columns = array( 't1.*' );
+							}
+
+							$select_columns = implode( ', ', $select_columns );
+
 							// Set query with offset and rows count
-							$query = sprintf( 'SELECT t1.* FROM `%s` AS t1 JOIN (SELECT %s FROM `%s` WHERE %s ORDER BY %s LIMIT %d, %d) AS t2 USING (%s)', $table_name, $table_keys, $table_name, $table_where, $table_keys, $table_offset, AI1WM_MAX_SELECT_RECORDS, $table_keys );
+							$query = sprintf( 'SELECT %s FROM `%s` AS t1 JOIN (SELECT %s FROM `%s` WHERE %s ORDER BY %s LIMIT %d, %d) AS t2 USING (%s)', $select_columns, $table_name, $table_keys, $table_name, $table_where, $table_keys, $table_offset, AI1WM_MAX_SELECT_RECORDS, $table_keys );
 
 						} else {
 
@@ -863,8 +932,15 @@ abstract class Ai1wm_Database {
 								$table_where = 1;
 							}
 
+							// Set table select columns
+							if ( ! ( $select_columns = $this->get_table_select_columns( $table_name ) ) ) {
+								$select_columns = array( '*' );
+							}
+
+							$select_columns = implode( ', ', $select_columns );
+
 							// Set query with offset and rows count
-							$query = sprintf( 'SELECT * FROM `%s` WHERE %s ORDER BY %s LIMIT %d, %d', $table_name, $table_where, $table_keys, $table_offset, AI1WM_MAX_SELECT_RECORDS );
+							$query = sprintf( 'SELECT %s FROM `%s` WHERE %s ORDER BY %s LIMIT %d, %d', $select_columns, $table_name, $table_where, $table_keys, $table_offset, AI1WM_MAX_SELECT_RECORDS );
 						}
 
 						// Run SQL query
@@ -898,7 +974,7 @@ abstract class Ai1wm_Database {
 										$value = $this->replace_column_prefixes( $value, 0 );
 									}
 
-									$items[] = $this->prepare_table_values( $value, $table_columns[ strtolower( $key ) ] );
+									$items[] = $this->prepare_table_values( $value, $column_types[ strtolower( $key ) ] );
 								}
 
 								// Set table values
@@ -1335,6 +1411,29 @@ abstract class Ai1wm_Database {
 	}
 
 	/**
+	 * Get MySQL column names
+	 *
+	 * @param  string $table_name Table name
+	 * @return array
+	 */
+	public function get_column_names( $table_name ) {
+		$column_names = array();
+
+		// Get column types
+		$result = $this->query( "SHOW COLUMNS FROM `{$table_name}`" );
+		while ( $row = $this->fetch_assoc( $result ) ) {
+			if ( isset( $row['Field'] ) ) {
+				$column_names[ strtolower( $row['Field'] ) ] = $row['Field'];
+			}
+		}
+
+		// Close result cursor
+		$this->free_result( $result );
+
+		return $column_names;
+	}
+
+	/**
 	 * Replace table name
 	 *
 	 * @param  string $input          Table value
@@ -1406,7 +1505,7 @@ abstract class Ai1wm_Database {
 		$search  = $this->get_old_table_prefixes();
 		$replace = $this->get_new_table_prefixes();
 
-		// Replace first occurance at a specified position
+		// Replace first occurrence at a specified position
 		if ( $position !== false ) {
 			for ( $i = 0; $i < count( $search ); $i++ ) {
 				$current = stripos( $input, $search[ $i ], $position );
@@ -1429,11 +1528,19 @@ abstract class Ai1wm_Database {
 	 * @return string
 	 */
 	protected function replace_column_prefixes( $input, $position = false ) {
-		$search  = $this->get_old_column_prefixes();
-		$replace = $this->get_new_column_prefixes();
+		$search   = $this->get_old_column_prefixes();
+		$replace  = $this->get_new_column_prefixes();
+		$reserved = $this->get_reserved_column_prefixes();
 
-		// Replace first occurance at a specified position
+		// Replace first occurrence at a specified position
 		if ( $position !== false ) {
+			for ( $i = 0; $i < count( $reserved ); $i++ ) {
+				$current = stripos( $input, $reserved[ $i ], $position );
+				if ( $current === $position ) {
+					return $input;
+				}
+			}
+
 			for ( $i = 0; $i < count( $search ); $i++ ) {
 				$current = stripos( $input, $search[ $i ], $position );
 				if ( $current === $position ) {
@@ -1887,29 +1994,32 @@ abstract class Ai1wm_Database {
 	 * @return string
 	 */
 	protected function prepare_table_values( $input, $column_type ) {
-		if ( is_null( $input ) ) {
-			return 'NULL';
-		} elseif ( stripos( $column_type, 'tinyint' ) === 0 ) {
-			return $input;
-		} elseif ( stripos( $column_type, 'smallint' ) === 0 ) {
-			return $input;
-		} elseif ( stripos( $column_type, 'mediumint' ) === 0 ) {
-			return $input;
-		} elseif ( stripos( $column_type, 'int' ) === 0 ) {
-			return $input;
-		} elseif ( stripos( $column_type, 'bigint' ) === 0 ) {
-			return $input;
-		} elseif ( stripos( $column_type, 'float' ) === 0 ) {
-			return $input;
-		} elseif ( stripos( $column_type, 'double' ) === 0 ) {
-			return $input;
-		} elseif ( stripos( $column_type, 'decimal' ) === 0 ) {
-			return $input;
-		} elseif ( stripos( $column_type, 'bit' ) === 0 ) {
-			return $input;
-		}
+		switch ( true ) {
+			case is_null( $input ):
+				return 'NULL';
 
-		return "'" . $this->escape( $input ) . "'";
+			case stripos( $column_type, 'tinyint' ) === 0:
+			case stripos( $column_type, 'smallint' ) === 0:
+			case stripos( $column_type, 'mediumint' ) === 0:
+			case stripos( $column_type, 'int' ) === 0:
+			case stripos( $column_type, 'bigint' ) === 0:
+			case stripos( $column_type, 'float' ) === 0:
+			case stripos( $column_type, 'double' ) === 0:
+			case stripos( $column_type, 'decimal' ) === 0:
+			case stripos( $column_type, 'bit' ) === 0:
+				return $input;
+
+			case stripos( $column_type, 'binary' ) === 0:
+			case stripos( $column_type, 'varbinary' ) === 0:
+			case stripos( $column_type, 'tinyblob' ) === 0:
+			case stripos( $column_type, 'mediumblob' ) === 0:
+			case stripos( $column_type, 'longblob' ) === 0:
+			case stripos( $column_type, 'blob' ) === 0:
+				return '0x' . bin2hex( $input );
+
+			default:
+				return "'" . $this->escape( $input ) . "'";
+		}
 	}
 
 	/**

@@ -84,21 +84,57 @@ class Ai1wm_Cron {
 	/**
 	 * Checks whether cronjob already exists
 	 *
-	 * @param  string  $hook Event hook
+	 * @param  string $hook Event hook
+	 * @param  array  $args Event callback arguments
 	 * @return boolean
 	 */
-	public static function exists( $hook ) {
+	public static function exists( $hook, $args = array() ) {
 		$cron = get_option( AI1WM_CRON, array() );
 		if ( empty( $cron ) ) {
 			return false;
 		}
 
 		foreach ( $cron as $timestamp => $hooks ) {
-			if ( isset( $hooks[ $hook ] ) ) {
-				return true;
+			if ( empty( $args ) ) {
+				if ( isset( $hooks[ $hook ] ) ) {
+					return true;
+				}
+			} else {
+				if ( isset( $hooks[ $hook ][ md5( serialize( $args ) ) ] ) ) {
+					return true;
+				}
 			}
 		}
 
 		return false;
+	}
+
+	/**
+	 * Deletes cron event(s) if it exists
+	 *
+	 * @param  string $hook Event hook
+	 * @param  array  $args Event callback arguments
+	 * @return boolean
+	 */
+	public static function delete( $hook, $args = array() ) {
+		$cron = get_option( AI1WM_CRON, array() );
+		if ( empty( $cron ) ) {
+			return false;
+		}
+
+		$key = md5( serialize( $args ) );
+		foreach ( $cron as $timestamp => $hooks ) {
+			if ( isset( $cron[ $timestamp ][ $hook ][ $key ] ) ) {
+				unset( $cron[ $timestamp ][ $hook ][ $key ] );
+			}
+			if ( isset( $cron[ $timestamp ][ $hook ] ) && empty( $cron[ $timestamp ][ $hook ] ) ) {
+				unset( $cron[ $timestamp ][ $hook ] );
+			}
+			if ( empty( $cron[ $timestamp ] ) ) {
+				unset( $cron[ $timestamp ] );
+			}
+		}
+
+		return update_option( AI1WM_CRON, $cron );
 	}
 }

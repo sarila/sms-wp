@@ -30,8 +30,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Ai1wm_Export_Enumerate_Tables {
 
 	public static function execute( $params, Ai1wm_Database $mysql = null ) {
-		global $wpdb;
-
 		// Set exclude database
 		if ( isset( $params['options']['no_database'] ) ) {
 			return $params;
@@ -41,7 +39,7 @@ class Ai1wm_Export_Enumerate_Tables {
 		if ( isset( $params['total_tables_count'] ) ) {
 			$total_tables_count = (int) $params['total_tables_count'];
 		} else {
-			$total_tables_count = 0;
+			$total_tables_count = 1;
 		}
 
 		// Set progress
@@ -49,33 +47,31 @@ class Ai1wm_Export_Enumerate_Tables {
 
 		// Get database client
 		if ( is_null( $mysql ) ) {
-			if ( empty( $wpdb->use_mysqli ) ) {
-				$mysql = new Ai1wm_Database_Mysql( $wpdb );
-			} else {
-				$mysql = new Ai1wm_Database_Mysqli( $wpdb );
-			}
+			$mysql = Ai1wm_Database_Utility::create_client();
 		}
 
 		// Include table prefixes
 		if ( ai1wm_table_prefix() ) {
 			$mysql->add_table_prefix_filter( ai1wm_table_prefix() );
-		} else {
-			foreach ( $mysql->get_tables() as $table_name ) {
+
+			// Include table prefixes (Webba Booking)
+			foreach ( array( 'wbk_services', 'wbk_days_on_off', 'wbk_locked_time_slots', 'wbk_appointments', 'wbk_cancelled_appointments', 'wbk_email_templates', 'wbk_service_categories', 'wbk_gg_calendars', 'wbk_coupons' ) as $table_name ) {
 				$mysql->add_table_prefix_filter( $table_name );
 			}
-		}
-
-		// Include table prefixes (Webba Booking)
-		foreach ( array( 'wbk_services', 'wbk_days_on_off', 'wbk_locked_time_slots', 'wbk_appointments', 'wbk_cancelled_appointments', 'wbk_email_templates', 'wbk_service_categories', 'wbk_gg_calendars', 'wbk_coupons' ) as $table_name ) {
-			$mysql->add_table_prefix_filter( $table_name );
 		}
 
 		// Create tables list file
 		$tables_list = ai1wm_open( ai1wm_tables_list_path( $params ), 'w' );
 
+		// Exclude selected db tables
+		$excluded_db_tables = array();
+		if ( isset( $params['options']['exclude_db_tables'], $params['excluded_db_tables'] ) ) {
+			$excluded_db_tables = explode( ',', $params['excluded_db_tables'] );
+		}
+
 		// Write table line
 		foreach ( $mysql->get_tables() as $table_name ) {
-			if ( ai1wm_write( $tables_list, $table_name . PHP_EOL ) ) {
+			if ( ! in_array( $table_name, $excluded_db_tables ) && ai1wm_putcsv( $tables_list, array( $table_name ) ) ) {
 				$total_tables_count++;
 			}
 		}

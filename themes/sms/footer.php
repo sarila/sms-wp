@@ -12,14 +12,54 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <h4 class="text-white mb-3">Contact</h4>
-                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                <?php if (get_theme_mod('sms_address_handle')) { ?>
+                <a href="">
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>
+                        <?php echo get_theme_mod('sms_address_handle'); ?>
+                    </p>
+                </a>
+                <?php } ?>
+                <?php if (get_theme_mod('sms_phone_handle')) { ?>
+                <a href="tel:<?php echo get_theme_mod('sms_phone_handle'); ?>">
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
+                        <?php echo get_theme_mod('sms_phone_handle'); ?>
+                    </p>
+                </a>
+                <?php } ?>
+                <?php if (get_theme_mod('sms_email_handle')) { ?>
+                <a href="mailto:<?php echo get_theme_mod('sms_email_handle'); ?>">
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>
+                        <?php echo get_theme_mod('sms_email_handle'); ?>
+                    </p>
+                </a>
+                <?php } ?>
                 <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <?php if (get_theme_mod('sms_twitter_handle')) { ?>
+                    <a class="btn btn-outline-light btn-social" target="_blank"
+                        href="<?php echo get_theme_mod('sms_twitter_handle'); ?>">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <?php } ?>
+                    <?php if (get_theme_mod('sms_facebook_handle')) { ?>
+                    <a class="btn btn-outline-light btn-social" target="_blank"
+                        href="<?php echo get_theme_mod('sms_facebook_handle'); ?>">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <?php } ?>
+
+                    <?php if (get_theme_mod('sms_youtube_handle')) { ?>
+                    <a class="btn btn-outline-light btn-social" target="_blank"
+                        href="<?php echo get_theme_mod('sms_youtube_handle'); ?>">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <?php } ?>
+
+                    <?php if (get_theme_mod('sms_instagram_handle')) { ?>
+                    <a class="btn btn-outline-light btn-social" target="_blank"
+                        href="<?php echo get_theme_mod('sms_instagram_handle'); ?>">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <?php } ?>
                 </div>
             </div>
 
@@ -38,7 +78,7 @@
         <div class="copyright">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">SMS</a>, All Right Reserved.
+                    &copy; <a class="border-bottom" href="#">Support My School</a>, All Right Reserved.
 
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                     Powered By <a class="border-bottom" href="#">Support My School</a>

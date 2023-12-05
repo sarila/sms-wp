@@ -93,6 +93,14 @@ require_once AI1WM_VENDOR_PATH .
 			DIRECTORY_SEPARATOR .
 			'servmask' .
 			DIRECTORY_SEPARATOR .
+			'filesystem' .
+			DIRECTORY_SEPARATOR .
+			'class-ai1wm-file-robots.php';
+
+require_once AI1WM_VENDOR_PATH .
+			DIRECTORY_SEPARATOR .
+			'servmask' .
+			DIRECTORY_SEPARATOR .
 			'cron' .
 			DIRECTORY_SEPARATOR .
 			'class-ai1wm-cron.php';
@@ -213,6 +221,10 @@ require_once AI1WM_CONTROLLER_PATH .
 			DIRECTORY_SEPARATOR .
 			'class-ai1wm-feedback-controller.php';
 
+require_once AI1WM_CONTROLLER_PATH .
+			DIRECTORY_SEPARATOR .
+			'class-ai1wm-schedules-controller.php';
+
 require_once AI1WM_EXPORT_PATH .
 			DIRECTORY_SEPARATOR .
 			'class-ai1wm-export-init.php';
@@ -243,7 +255,15 @@ require_once AI1WM_EXPORT_PATH .
 
 require_once AI1WM_EXPORT_PATH .
 			DIRECTORY_SEPARATOR .
+			'class-ai1wm-export-enumerate-plugins.php';
+
+require_once AI1WM_EXPORT_PATH .
+			DIRECTORY_SEPARATOR .
 			'class-ai1wm-export-enumerate-tables.php';
+
+require_once AI1WM_EXPORT_PATH .
+			DIRECTORY_SEPARATOR .
+			'class-ai1wm-export-enumerate-themes.php';
 
 require_once AI1WM_EXPORT_PATH .
 			DIRECTORY_SEPARATOR .
@@ -252,6 +272,14 @@ require_once AI1WM_EXPORT_PATH .
 require_once AI1WM_EXPORT_PATH .
 			DIRECTORY_SEPARATOR .
 			'class-ai1wm-export-media.php';
+
+require_once AI1WM_EXPORT_PATH .
+			DIRECTORY_SEPARATOR .
+			'class-ai1wm-export-plugins.php';
+
+require_once AI1WM_EXPORT_PATH .
+			DIRECTORY_SEPARATOR .
+			'class-ai1wm-export-themes.php';
 
 require_once AI1WM_EXPORT_PATH .
 			DIRECTORY_SEPARATOR .
@@ -275,6 +303,10 @@ require_once AI1WM_IMPORT_PATH .
 
 require_once AI1WM_IMPORT_PATH .
 			DIRECTORY_SEPARATOR .
+			'class-ai1wm-import-users.php';
+
+require_once AI1WM_IMPORT_PATH .
+			DIRECTORY_SEPARATOR .
 			'class-ai1wm-import-compatibility.php';
 
 require_once AI1WM_IMPORT_PATH .
@@ -287,7 +319,19 @@ require_once AI1WM_IMPORT_PATH .
 
 require_once AI1WM_IMPORT_PATH .
 			DIRECTORY_SEPARATOR .
+			'class-ai1wm-import-check-encryption.php';
+
+require_once AI1WM_IMPORT_PATH .
+			DIRECTORY_SEPARATOR .
+			'class-ai1wm-import-check-decryption-password.php';
+
+require_once AI1WM_IMPORT_PATH .
+			DIRECTORY_SEPARATOR .
 			'class-ai1wm-import-blogs.php';
+
+require_once AI1WM_IMPORT_PATH .
+			DIRECTORY_SEPARATOR .
+			'class-ai1wm-import-options.php';
 
 require_once AI1WM_IMPORT_PATH .
 			DIRECTORY_SEPARATOR .
@@ -308,10 +352,6 @@ require_once AI1WM_IMPORT_PATH .
 require_once AI1WM_IMPORT_PATH .
 			DIRECTORY_SEPARATOR .
 			'class-ai1wm-import-database.php';
-
-require_once AI1WM_IMPORT_PATH .
-			DIRECTORY_SEPARATOR .
-			'class-ai1wm-import-plugins.php';
 
 require_once AI1WM_IMPORT_PATH .
 			DIRECTORY_SEPARATOR .
