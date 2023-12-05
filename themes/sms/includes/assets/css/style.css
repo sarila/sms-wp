@@ -304,7 +304,7 @@
   display: flex;
   justify-content: space-between;
   border-radius: 4px;
-  background-color: lightgrey;
+  background-color: #f0fbfc;
 }
 
 .hero_section_wrapper .hero_section_left .budgets_wrapper .budget:hover {
@@ -373,7 +373,7 @@
   .view_and_download_button
   button {
   text-transform: capitalize;
-  background-color: #5f6465;
+  background-color: #61bdcc;
   border: none;
   border-radius: 4px;
   padding: 4px 10px;
@@ -408,7 +408,7 @@
 .hero_section_wrapper .hero_section_right .report_wrapper button {
   padding: 15px;
   border-radius: 4px;
-  background-color: #5f6465;
+  background-color: #61bdcc;
   color: white;
   text-transform: capitalize;
   border: none;
@@ -559,7 +559,7 @@
   padding: 0px 20px;
   color: #708090;
   padding-bottom: 20px;
-}/* stake holder section css end */
+} /* stake holder section css end */
 /* blog section css start */
 .blog_container {
   padding: 30px 50px;
@@ -568,8 +568,9 @@
 
 .blog_container .blog_header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .blog_container .blog_header h2 {
@@ -581,14 +582,22 @@
   text-transform: capitalize;
   font-size: 20px;
 }
-.blog_container .blog_header .blog_section_button button {
+.blog_section_button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.blog_section_button button {
   padding: 5px 10px;
   text-transform: capitalize;
   border: none;
   border-radius: 4px;
+  background-color: #61bdcc;
 }
-.blog_container .blog_header .blog_section_button button a {
-  color: #2d4a79;
+.blog_section_button button a {
+  color: #fff;
   font-size: 14px;
 }
 
@@ -661,7 +670,6 @@
 }
 
 @media (max-width: 1024px) {
-
   /* hero section css start */
 
   .container .hero_section_wrapper {
@@ -897,4 +905,10 @@
   margin-right: 0;
   padding-right: 0;
   border-right: none;
+}
+
+.team-profile{
+  height: 300px;
+  width: auto;
+  border: 1px solid red;
 }

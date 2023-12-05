@@ -240,35 +240,35 @@
 <!-- Service Start -->
 <div class="container-xxl py-5">
   <div class="container">
-  <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
       <h2 class="section-title bg-white text-center text-primary px-3" style="font-size: 24px">How It Works?</h2>
-      <p style="font-size: 16px">This is the simple step that we follow to loop into our report and find a sustainable solution to that problem</p>
+      <p style="font-size: 16px" class="pt-2">This is the simple step that we follow to loop into our report and find a sustainable solution to that problem</p>
     </div>
     <div class="row g-4">
       <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
         <div class="service-item text-center pt-3">
           <div class="p-4">
-            <i class="bi bi-flag-fill mb-4" style="font-size: 50px; color: #3D91F9"></i>
+            <i class="bi bi-flag-fill text-primary mb-4" style="font-size: 50px;"></i>
             <h5>Get Report</h5>
-      <span>At the very first step, we receive report from different stakeholders</span>
+            <span>At the very first step, we receive report from different stakeholders</span>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
         <div class="service-item text-center pt-3">
           <div class="p-4">
-            <i class="bi bi-arrow-repeat mb-4" style="font-size: 50px; color: #3D91F9"></i>
+            <i class="bi bi-arrow-repeat text-primary mb-4" style="font-size: 50px; "></i>
             <h5>Review</h5>
-      <span>In second step, we review and work on that problem to find out sustainable solutions.</span>
+            <span>In second step, we review and work on that problem to find out sustainable solutions.</span>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
         <div class="service-item text-center pt-3">
           <div class="p-4">
-            <i class="fa fa-3x fa-home  mb-4" style="font-size: 50px; color: #3D91F9"></i>
+            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
             <h5>Result</h5>
-      <span>We address the issue and inform stakeholders about the complete educational budget."</span>
+            <span>We address the issue and inform stakeholders about the complete educational budget."</span>
           </div>
         </div>
       </div>
@@ -278,21 +278,20 @@
 <!-- Service End -->
 
 <!-- Categories Start -->
-<div class="container-xxl py-5 category">
+<div class="container-xxl py-5 px-0 category">
   <div class="container">
     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-    <div class="stakeholders_title">
-    <h2>Unveiling the Beneficiaries of Our Platform</h2>
-    <p>Our Platform's Wide Reach: Empowering over 34,368 Nepalese Government Schools, Monitoring Yearly Milestones, Assisting News Officials in Reporting Annual Progress, and Engaging Local and Provincial Government Entities.</p>
-    </div>
+      <div class="text-center wow fadeInUp pb-4" data-wow-delay="0.1s">
+        <h2 class="section-title bg-white text-center text-primary px-3" style="font-size: 24px">Unveiling the Beneficiaries of Our Platform</h2>
+        <p style="font-size: 16px" class="pt-2">Our Platform's Wide Reach: Empowering over 34,368 Nepalese Government Schools, Monitoring Yearly Milestones, Assisting News Officials in Reporting Annual Progress, and Engaging Local and Provincial Government Entities</p>
+      </div>
     </div>
     <div class="row g-3">
       <div class="col-lg-7 col-md-6">
         <div class="row g-3">
           <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
             <a class="position-relative d-block overflow-hidden" href="">
-              <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/governmentSchool.jpeg" style="height: 350px; width: 100%; object-fit: cover"
-                alt="">
+              <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/governmentSchool.jpeg" style="height: 350px; width: 100%; object-fit: cover" alt="">
               <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                 <small class="text-primary">34k +</small>
                 <h5 class="m-0">Government Schools</h5>
@@ -301,8 +300,7 @@
           </div>
           <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
             <a class="position-relative d-block overflow-hidden" href="">
-              <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/Map_of_nepalese_provinces_by_population.png"
-                alt="">
+              <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/Map_of_nepalese_provinces_by_population.png" alt="">
               <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                 <small class="text-primary">7</small>
                 <h5 class="m-0">Provinces</h5>
@@ -311,8 +309,7 @@
           </div>
           <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
             <a class="position-relative d-block overflow-hidden" href="">
-              <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/cat-3.jpg"
-                alt="">
+              <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/cat-3.jpg" alt="">
               <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                 <small class="text-primary">50 +</small>
                 <h5 class="m-0">Private News Channels</h5>
@@ -323,9 +320,7 @@
       </div>
       <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
         <a class="position-relative d-block h-100 overflow-hidden" href="">
-          <img class="img-fluid position-absolute w-100 h-100"
-            src="<?php echo get_template_directory_uri() ?>/includes/assets/img/public.jpg" alt="" style="height: auto; width: 100%; object-fit: cover"
-            style="object-fit: cover;">
+          <img class="img-fluid position-absolute w-100 h-100" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/public.jpg" alt="" style="height: auto; width: 100%; object-fit: cover" style="object-fit: cover;">
           <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
             <h5 class="m-0">Public</h5>
             <small class="text-primary">2 Millions +</small>
@@ -341,9 +336,8 @@
 <!-- blog section start -->
 <div class="blog_container" id="blog">
   <div class="blog_header">
-    <h2>explore articles</h2>
-    <div class="blog_section_button">
-      <button><a href="blog">show more</a></button>
+    <div class="text-center wow fadeInUp pb-4" data-wow-delay="0.1s">
+      <h2 class="section-title bg-white text-center text-primary px-3" style="font-size: 24px">Explore latest Articles</h2>
     </div>
   </div>
   <div class="blog_wrapper">
@@ -411,6 +405,10 @@
         </div>
       </div>
     </div>
+
+  </div>
+  <div class="blog_section_button">
+    <button><a href="blog">show more</a></button>
   </div>
 </div>
 <!-- blog section end -->
