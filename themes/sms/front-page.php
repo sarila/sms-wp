@@ -12,7 +12,7 @@
       <h1>For every student,
         every teacher.
         every parent.</h1>
-      <p>We're a nonprofit, and we want to give you reports about school budget. If you're not satisfied and think your school isn't doing what the government says it should for public schools, we're here to help.<br /> <b>Report through following links:</b></p>
+      <p> A report can be done by students, teachers, parents, youths, organizations, and the people from local community. This report cover a wind range of topics concerning the school, such as aspects related to infrastructure, science lap, computer lap, the library, sports, and more.</p>
     </div>
     <div class="button_wrapper">
       <button>Students</button>
@@ -149,14 +149,16 @@
   </div>
   <div class="hero_section_right">
     <div class="report_wrapper">
-      <h2>If you want to report something about your school?</h2>
+      <h2>Dissatisfaction of Our Stakeholders: Addressing Concerns and Improving Engagement</h2>
       <p>
-        A report can be done by students, teachers, parents, youths, organizations, and the people from local community. This report cover a wind range of topics concerning the school, such as aspects related to infrastructure, science lap, computer lap, the library, sports, and more.
+      This pie chart illustrates the frequency of reports received from our stakeholders regarding various aspects of schools, including the library, computer lab, science lab, toilets, and more.
       </p>
-      <button> <i class="fa-solid fa-pen-to-square"></i> Request/Report</button>
+      <button><a href="https://lookerstudio.google.com/embed/u/0/reporting/ffcf76e8-acbf-410e-979a-7eb25987a0e3/page/r5NjD" style="color: white;">View in Detail</a></button>
     </div>
     <div class="img_wrapper">
-      <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/budgetshow.jpg" alt="">
+      <iframe src="https://lookerstudio.google.com/embed/u/0/reporting/ffcf76e8-acbf-410e-979a-7eb25987a0e3/page/r5NjD" width="600" height="400" style="border:none;">
+      </iframe>
+
     </div>
   </div>
 </div>
