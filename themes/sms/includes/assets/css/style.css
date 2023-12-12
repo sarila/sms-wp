@@ -264,7 +264,76 @@
   list-style: none;
 }
 
-/* end of header css */
+/* start of styling start for hero container */
+.logocls {
+  height: 50px;
+  width: 180px;
+}
+
+.hero_container {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  min-height: 80vh;
+}
+
+.hero_container .hero_image_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero_container .hero_image_wrapper img {
+  height: 300px;
+  width: 400px;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.hero_container .hero_button_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero_container .hero_button_wrapper div h1 {
+  font-size: 40px;
+  padding-right: 30%;
+}
+
+.hero_container .hero_button_wrapper div p {
+  padding: 10px 0px;
+}
+
+.hero_container .hero_button_wrapper .button_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.hero_container .hero_button_wrapper .button_wrapper button {
+  background-color: #61bdcc;
+  padding: 10px 30px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hero_container {
+    padding: 50px 20px;
+    grid-template-columns: 1fr;
+  }
+  .hero_container .hero_button_wrapper .button_wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero_container .hero_button_wrapper .button_wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+/* end of styling start for hero container */
 
 /* start of hero section css */
 
@@ -907,7 +976,7 @@
   border-right: none;
 }
 
-.team-profile{
+.team-profile {
   height: 300px;
   width: auto;
   border: 1px solid red;
