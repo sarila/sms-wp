@@ -13,63 +13,58 @@
             <div class="col-lg-4 col-md-6">
                 <h4 class="text-white mb-3">Contact</h4>
                 <?php if (get_theme_mod('sms_address_handle')) { ?>
-                <a href="">
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>
-                        <?php echo get_theme_mod('sms_address_handle'); ?>
-                    </p>
-                </a>
+                    <a href="">
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>
+                            <?php echo get_theme_mod('sms_address_handle'); ?>
+                        </p>
+                    </a>
                 <?php } ?>
                 <?php if (get_theme_mod('sms_phone_handle')) { ?>
-                <a href="tel:<?php echo get_theme_mod('sms_phone_handle'); ?>">
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
-                        <?php echo get_theme_mod('sms_phone_handle'); ?>
-                    </p>
-                </a>
+                    <a href="tel:<?php echo get_theme_mod('sms_phone_handle'); ?>">
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
+                            <?php echo get_theme_mod('sms_phone_handle'); ?>
+                        </p>
+                    </a>
                 <?php } ?>
                 <?php if (get_theme_mod('sms_email_handle')) { ?>
-                <a href="mailto:<?php echo get_theme_mod('sms_email_handle'); ?>">
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>
-                        <?php echo get_theme_mod('sms_email_handle'); ?>
-                    </p>
-                </a>
+                    <a href="mailto:<?php echo get_theme_mod('sms_email_handle'); ?>">
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>
+                            <?php echo get_theme_mod('sms_email_handle'); ?>
+                        </p>
+                    </a>
                 <?php } ?>
                 <div class="d-flex pt-2">
                     <?php if (get_theme_mod('sms_twitter_handle')) { ?>
-                    <a class="btn btn-outline-light btn-social" target="_blank"
-                        href="<?php echo get_theme_mod('sms_twitter_handle'); ?>">
-                        <i class="fab fa-twitter"></i>
-                    </a>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="<?php echo get_theme_mod('sms_twitter_handle'); ?>">
+                            <i class="fab fa-twitter"></i>
+                        </a>
                     <?php } ?>
                     <?php if (get_theme_mod('sms_facebook_handle')) { ?>
-                    <a class="btn btn-outline-light btn-social" target="_blank"
-                        href="<?php echo get_theme_mod('sms_facebook_handle'); ?>">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="<?php echo get_theme_mod('sms_facebook_handle'); ?>">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     <?php } ?>
 
                     <?php if (get_theme_mod('sms_youtube_handle')) { ?>
-                    <a class="btn btn-outline-light btn-social" target="_blank"
-                        href="<?php echo get_theme_mod('sms_youtube_handle'); ?>">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="<?php echo get_theme_mod('sms_youtube_handle'); ?>">
+                            <i class="fab fa-youtube"></i>
+                        </a>
                     <?php } ?>
 
                     <?php if (get_theme_mod('sms_instagram_handle')) { ?>
-                    <a class="btn btn-outline-light btn-social" target="_blank"
-                        href="<?php echo get_theme_mod('sms_instagram_handle'); ?>">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="<?php echo get_theme_mod('sms_instagram_handle'); ?>">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     <?php } ?>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6">
                 <h4 class="text-white mb-3">Newsletter</h4>
-                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                <p>Stay updated with our latest news and updates by subscribing to our newsletter.</p>
                 <div class="position-relative mx-auto" style="max-width: 400px;">
-                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                    <button type="button"
-                        class="btn btn-danger py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter Your Email">
+                    <button type="button" class="btn sign_up_btn  py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                 </div>
             </div>
         </div>

@@ -208,6 +208,12 @@
   color: var(--light);
 }
 
+/* hero page  */
+.hero_image {
+  border-bottom: 2px solid #ff6b6b;
+  padding-bottom: 5px;
+}
+
 /*** Section Title ***/
 .section-title {
   position: relative;
@@ -275,7 +281,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  min-height: 80vh;
+  min-height: 75vh;
 }
 
 .hero_container .hero_image_wrapper {
@@ -286,6 +292,10 @@
 .hero_container .hero_image_wrapper img {
   height: 300px;
   width: 400px;
+  clip-path: content-box;
+  clip-path: fill-box;
+  clip-path: stroke-box;
+  clip-path: view-box;
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 }
 
@@ -318,6 +328,13 @@
   color: #fff;
 }
 
+.hero_container .hero_button_wrapper .button_wrapper button:hover {
+  background-color: #ff6b6b;
+  color: #f4f9ff;
+  scale: 0.98;
+  transition: all 300ms ease-in;
+}
+
 @media (max-width: 768px) {
   .hero_container {
     padding: 50px 20px;
@@ -326,6 +343,17 @@
   .hero_container .hero_button_wrapper .button_wrapper {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.sign_up_btn {
+  background-color: #61bdcc !important;
+  color: #fff !important;
+  border-radius: 2px !important;
+}
+
+.sign_up_btn:hover {
+  background-color: #ff6b6b !important;
+  transition: all 300ms ease-in;
 }
 
 @media (max-width: 500px) {
@@ -421,9 +449,11 @@
 .show_more_button {
   color: #2d4a79;
 }
-.show_more_button:hover {
+.show_more_button:hover,
+.show_more_button a:hover {
   text-decoration: underline;
   transition: all 300ms ease-in;
+  color: #ff6b6b;
 }
 
 .hero_section_wrapper
@@ -460,6 +490,7 @@
   scale: 0.98;
   transition: all 500ms ease-in-out;
   cursor: pointer;
+  background-color: #ff6b6b;
 }
 
 .hero_section_wrapper .hero_section_right .report_wrapper {
@@ -484,6 +515,11 @@
   border: none;
   margin: 10px 0px;
   font-size: 15px;
+}
+
+.hero_section_wrapper .hero_section_right .report_wrapper button:hover {
+  background-color: #ff6b6b;
+  color: #fff;
 }
 
 .hero_section_wrapper .hero_section_right .report_wrapper button:hover {
@@ -667,6 +703,12 @@
   border: none;
   border-radius: 4px;
   background-color: #61bdcc;
+}
+
+.blog_section_button button:hover {
+  background-color: #ff6b6b;
+  transition: all 300ms ease-in;
+  scale: 0.98;
 }
 .blog_section_button button a {
   color: #fff;
@@ -929,7 +971,9 @@
 }
 
 .footer .btn.btn-social:hover {
-  color: var(--primary);
+  color: #ff6b6b;
+  background-color: var(--light) !important;
+  border: 1px solid var(--light);
 }
 
 .footer .btn.btn-link {
