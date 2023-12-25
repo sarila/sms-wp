@@ -106,7 +106,7 @@
       <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
         <div class="team-item bg-light">
           <div class="overflow-hidden">
-            <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/team-1.jpg"
+            <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/team-1.jpg"  class="team-profile"
               alt="">
           </div>
           <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">

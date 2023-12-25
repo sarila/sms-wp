@@ -1,8 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-    <a href="/index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>
-            SMS
-        </h2>
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-2">
+    <a href="/wordpress" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <img class="img-fluid logocls" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/logo.png" alt="logo">
     </a>
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
@@ -22,7 +20,6 @@
             <!-- </div> -->
             <a href="<?php echo site_url('/contact'); ?>" class="nav-item nav-link active">Contact</a>
         </div>
-        <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i
-                class="fa fa-arrow-right ms-3"></i></a>
+        <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
     </div>
 </nav>

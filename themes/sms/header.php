@@ -3,10 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <title>eLEARNING - eLearning HTML Template</title>
+  <title>SMS | Budget Transparency in Education</title> 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+  <meta content="support my school, sms, education budget, nepal, transparency" name="keywords">
+  <meta content="
+We are a group of young individuals and each member brings a unique set of skills and a passionate dedication to transparency, accountability, civic engagement, innovation, equality, and empowerment. Together, we are a force for positive change in the education sector." name="description">
 
   <!-- Favicon -->
   <link href="img/favicon.ico" rel="icon">

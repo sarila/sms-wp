@@ -69,11 +69,11 @@
             while ($teams->have_posts()):
               $teams->the_post();
               ?>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item bg-light">
                     <div class="overflow-hidden">
                         <img class="img-fluid" src="<?php echo the_post_thumbnail_url() ?>" alt="<?php the_title();
-                               the_field('designation'); ?>">
+                               the_field('designation'); ?>" style="height: 300px; width: 100%; object-fit: cover;border-radius: 2px;">
                     </div>
                     <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                         <div class="bg-light d-flex justify-content-center pt-2 px-1">
@@ -138,7 +138,7 @@
               ?>
 
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item text-center pt-3">
+                <div class="service-item bg-light text-center pt-3">
                     <div class="p-4">
                         <img class="img-fluid" src="<?php echo the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>">
                         <h5 class="mb-3">
