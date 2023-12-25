@@ -11,18 +11,23 @@
     </div>
     <div class="hero_button_wrapper">
         <div>
-            <h1>For every <span style="color: #ff6b6b">Student</span>,
-                every <span style="color: #ff6b6b">Teacher</span>.
-                every <span style="color: #ff6b6b">Parent</span>.</h1>
+            <h1><span style="color: #2d4a79"> For every </span> <span style="color: #ffa500">STUDENT</span><span
+                    style="color: #2d4a79">,
+                    every</span> <span style="color: #ffa500">TEACHER</span><span style="color: #2d4a79">, and
+                </span> <span style="color: #ffa500">PARENT</span><span style="color: #2d4a79">.</span></h1>
             <p> A report can be done by students, teachers, parents, youths, organizations, and the people from local
                 community. This report cover a wind range of topics concerning the school, such as aspects related to
                 infrastructure, science lap, computer lap, the library, sports, and more.</p>
         </div>
         <div class="button_wrapper">
-            <button>Students</button>
-            <button>Teachers</button>
-            <button>Parents</button>
-            <button>Others</button>
+            <button><a href="https://forms.gle/sdE5W9wTkpsZLwPZ9" class="text-white" target="_blank">
+                    Students</a></button>
+            <button><a href="https://forms.gle/HDXpkZ6bo1wxhjm78" class="text-white" target="_blank"> Community
+                    members</a></button>
+            <button><a href="https://forms.gle/V3RCdNmVu5FZQEwz9" class="text-white" target="_blank">
+                    Teachers</a></button>
+            <button><a href="https://forms.gle/HJMejXvQULjuhrjw8" class="text-white" target="_blank"> Government
+                    Officials</a></button>
         </div>
     </div>
 </div>
@@ -158,9 +163,9 @@
                 This pie chart illustrates the frequency of reports received from our stakeholders regarding various
                 aspects of schools, including the library, computer lab, science lab, toilets, and more.
             </p>
-            <button class="view_detail_btn"><a
-                    href="https://lookerstudio.google.com/embed/u/0/reporting/ffcf76e8-acbf-410e-979a-7eb25987a0e3/page/r5NjD"
-                    style="color: white;">View in Detail</a></button>
+            <button class="view_detail_btn"><a class="text-white font-weight-bold"
+                    href="https://lookerstudio.google.com/embed/u/0/reporting/ffcf76e8-acbf-410e-979a-7eb25987a0e3/page/r5NjD">View
+                    in detail</a></button>
         </div>
         <div class="img_wrapper">
             <iframe
@@ -173,55 +178,6 @@
 </div>
 <!-- hero section end -->
 
-<!-- status section -->
-<!-- <div class="status_container">
-  <h2>Request / Report Status</h2>
-  <div class="status_div_wrapper">
-    <div class="status_wrapper">
-      <p>Report Accepted</p>
-      <h3><span>105 (100%)</span></h3>
-    </div>
-    <div class="status_wrapper">
-      <p>on review</p>
-      <h3><span>11 (8%)</span></h3>
-    </div>
-    <div class="status_wrapper">
-      <p>on hold</p>
-      <h3><span>47 (45%)</span></h3>
-    </div>
-    <div class="status_wrapper">
-      <p>resolved</p>
-      <h3><span>47 (45%)</span></h3>
-    </div>
-  </div>
-</div> -->
-<!-- end of status section -->
-
-
-<!-- start of work step section -->
-
-<!-- <div class="how_it_works_container">
-  <h2>how it works?</h2>
-  <div class="htw_content_wrapper">
-    <div class="htw_wrapper">
-      <div class="circle"><span>1</span></div>
-      <p>Get Report</p>
-      <span>At the very first step, we receive report from different stakeholders</span>
-    </div>
-    <div class="htw_wrapper">
-      <div class="circle"><span>2</span></div>
-      <p>review</p>
-      <span>In second step, we review and work on that problem to find out sustainable solutions.</span>
-    </div>
-    <div class="htw_wrapper">
-      <div class="circle"><span>3</span></div>
-      <p>Result</p>
-      <span>We address the issue and inform stakeholders about the complete educational budget."</span>
-    </div>
-  </div>
-</div> -->
-<!-- end of work step section -->
-
 <!-- Service Start -->
 <div class="container-xxl py-5">
     <div class="container">
@@ -230,30 +186,33 @@
             <p style="font-size: 16px" class="pt-2">This is the simple step that we follow to loop into our report and
                 find a sustainable solution to that problem</p>
         </div>
-        <div class="row g-4">
-            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row g-4" style="display:flex;justify-content:center">
+            <div class="col-lg-3 col-sm-4 wow fadeInUp" data-wow-delay="0.1s"
+                style="background-color: #f0fbfc; margin:10px">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <i class="bi bi-flag-fill text-primary mb-4" style="font-size: 50px;"></i>
-                        <h5>Get Report</h5>
+                        <i class="bi bi-flag-fill how-it-works-btn mb-4" style="font-size: 50px;"></i>
+                        <h5>Get report</h5>
                         <span>At the very first step, we receive report from different stakeholders</span>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-3 col-sm-4 wow fadeInUp" data-wow-delay="0.3s"
+                style="background-color: #f0fbfc; margin:10px">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <i class="bi bi-arrow-repeat text-primary mb-4" style="font-size: 50px; "></i>
+                        <i class="bi bi-arrow-repeat how-it-works-btn mb-4" style="font-size: 50px; "></i>
                         <h5>Review</h5>
                         <span>In second step, we review and work on that problem to find out sustainable
                             solutions.</span>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="col-lg-3 col-sm-4 wow fadeInUp" data-wow-delay="0.5s"
+                style="background-color: #f0fbfc; margin:10px">
                 <div class="service-item text-center pt-3">
                     <div class="p-4">
-                        <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                        <i class="fa fa-3x fa-book-open how-it-works-btn mb-4"></i>
                         <h5>Result</h5>
                         <span>We address the issue and inform stakeholders about the complete educational
                             budget."</span>
@@ -413,7 +372,7 @@
 
     </div>
     <div class="blog_section_button">
-        <button><a href="blog">show more</a></button>
+        <button><a href="blog">Show more</a></button>
     </div>
 </div>
 <!-- blog section end -->

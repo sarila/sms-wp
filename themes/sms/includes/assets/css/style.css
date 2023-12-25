@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-  --primary: #06bbcc;
+  --primary: #2D4A79;
   --light: #f0fbfc;
   --dark: #181d38;
 }
@@ -45,6 +45,14 @@
 .btn.btn-primary,
 .btn.btn-secondary {
   color: #ffffff;
+}
+
+.how-it-works-btn {
+  color: #2D4A79;
+}
+
+.how-it-works-btn:hover {
+  color: #ffa500;
 }
 
 .btn-square {
@@ -210,7 +218,7 @@
 
 /* hero page  */
 .hero_image {
-  border-bottom: 2px solid #ff6b6b;
+  border-bottom: 2px solid #ffa500;
   padding-bottom: 5px;
 }
 
@@ -277,7 +285,7 @@
 }
 
 .hero_container {
-  padding: 50px;
+  padding: 40px 80px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -321,7 +329,7 @@
 }
 
 .hero_container .hero_button_wrapper .button_wrapper button {
-  background-color: #61bdcc;
+  background-color: #2d4a79;
   padding: 10px 30px;
   border-radius: 4px;
   border: none;
@@ -329,7 +337,7 @@
 }
 
 .hero_container .hero_button_wrapper .button_wrapper button:hover {
-  background-color: #ff6b6b;
+  background-color: #ffa500;
   color: #f4f9ff;
   scale: 0.98;
   transition: all 300ms ease-in;
@@ -346,13 +354,13 @@
 }
 
 .sign_up_btn {
-  background-color: #61bdcc !important;
+  background-color: #2d4a79 !important;
   color: #fff !important;
   border-radius: 2px !important;
 }
 
 .sign_up_btn:hover {
-  background-color: #ff6b6b !important;
+  background-color: #ffa500 !important;
   transition: all 300ms ease-in;
 }
 
@@ -366,7 +374,7 @@
 /* start of hero section css */
 
 .hero_section_wrapper {
-  padding: 30px 50px;
+  padding: 40px 80px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
@@ -453,7 +461,7 @@
 .show_more_button a:hover {
   text-decoration: underline;
   transition: all 300ms ease-in;
-  color: #ff6b6b;
+  color: #ffa500;
 }
 
 .hero_section_wrapper
@@ -473,7 +481,7 @@
   .view_and_download_button
   button {
   text-transform: capitalize;
-  background-color: #61bdcc;
+  background-color: #2d4a79;
   border: none;
   border-radius: 4px;
   padding: 4px 10px;
@@ -490,7 +498,7 @@
   scale: 0.98;
   transition: all 500ms ease-in-out;
   cursor: pointer;
-  background-color: #ff6b6b;
+  background-color: #ffa500;
 }
 
 .hero_section_wrapper .hero_section_right .report_wrapper {
@@ -509,7 +517,7 @@
 .hero_section_wrapper .hero_section_right .report_wrapper button {
   padding: 15px;
   border-radius: 4px;
-  background-color: #61bdcc;
+  background-color: #2d4a79;
   color: white;
   text-transform: capitalize;
   border: none;
@@ -518,7 +526,7 @@
 }
 
 .hero_section_wrapper .hero_section_right .report_wrapper button:hover {
-  background-color: #ff6b6b;
+  background-color: #ffa500;
   color: #fff;
 }
 
@@ -633,7 +641,7 @@
   color: #2d4a79;
 }
 .how_it_works_container .htw_content_wrapper .htw_wrapper div {
-  background-color: #ff6b6b;
+  background-color: #ffa500;
   color: white;
   height: 40px;
   width: 40px;
@@ -670,7 +678,7 @@
 } /* stake holder section css end */
 /* blog section css start */
 .blog_container {
-  padding: 30px 50px;
+  padding: 30px 80px;
   height: fit-content;
 }
 
@@ -699,14 +707,14 @@
 }
 .blog_section_button button {
   padding: 5px 10px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   border: none;
   border-radius: 4px;
-  background-color: #61bdcc;
+  background-color: #2d4a79;
 }
 
 .blog_section_button button:hover {
-  background-color: #ff6b6b;
+  background-color: #ffa500;
   transition: all 300ms ease-in;
   scale: 0.98;
 }
@@ -1123,7 +1131,7 @@
 }
 
 .footer .btn.btn-social:hover {
-  color: #ff6b6b;
+  color: #ffa500;
   background-color: var(--light) !important;
   border: 1px solid var(--light);
 }
