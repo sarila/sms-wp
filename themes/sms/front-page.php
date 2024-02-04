@@ -173,7 +173,7 @@
 <!-- hero section end -->
 
 <!-- Service Start -->
-<div class="container-xxl py-5">
+<!-- <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h2 class="section-title bg-white text-center text-primary px-3 text-uppercase" style="font-size: 24px">How
@@ -215,7 +215,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Service End -->
 
 <!-- Categories Start -->
@@ -289,68 +289,22 @@
     <div class="blog_wrapper">
         <div class="blog">
             <div class="blog_image">
-                <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/supportmyschool.jpg" alt="">
+                <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/blog2.JPG" alt="">
             </div>
             <div class="blog_detail">
-                <h3><a href="#">Summery of Nepal Government School Budget 2023/2024</a></h3>
+                <h3><a href="#">Workshop on design thinking, internet safety, and financial management
+                    </a></h3>
                 <div class="date_author">
                     <label for="date">
-                        <span>date: </span><span>july 23, 2023</span>
+                        <span>date: </span>Dec 29-31,2023<span></span>
                     </label>
                     <label for="author">
-                        <span>author: </span><span>himal tamang</span>
+                        <span>author: </span>admin<span></span>
                     </label>
                 </div>
             </div>
         </div>
-        <div class="blog">
-            <div class="blog_image">
-                <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/public.jpg" alt="">
-            </div>
-            <div class="blog_detail">
-                <h3><a href="#">Summery of Nepal Government School Budget 2023/2024</a></h3>
-                <div class="date_author">
-                    <label for="date">
-                        <span style="font-weight: 500;">date: </span><span>july 23, 2023</span>
-                    </label>
-                    <label for="author">
-                        <span style="font-weight: 500;">author: </span><span>himal tamang</span>
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="blog">
-            <div class="blog_image">
-                <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/governmentSchool.jpeg" alt="">
-            </div>
-            <div class="blog_detail">
-                <h3><a href="#">Summery of Nepal Government School Budget 2023/2024</a></h3>
-                <div class="date_author">
-                    <label for="date">
-                        <span>date: </span><span>july 23, 2023</span>
-                    </label>
-                    <label for="author">
-                        <span>author: </span><span>himal tamang</span>
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="blog">
-            <div class="blog_image">
-                <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/budgetshow.jpg" alt="">
-            </div>
-            <div class="blog_detail">
-                <h3><a href="#">Summery of Nepal Government School Budget 2023/2024</a></h3>
-                <div class="date_author">
-                    <label for="date">
-                        <span>date: </span><span>july 23, 2023</span>
-                    </label>
-                    <label for="author">
-                        <span>author: </span><span>himal tamang</span>
-                    </label>
-                </div>
-            </div>
-        </div>
+
 
     </div>
     <div class="blog_section_button">
