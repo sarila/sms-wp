@@ -20,7 +20,6 @@
             <!-- </div> -->
             <a href="<?php echo site_url('/contact'); ?>" class="nav-item nav-link active">Contact</a>
         </div>
-        <a href="https://forms.gle/sdE5W9wTkpsZLwPZ9" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
-            target="_blank">Tell us more<i class="fa fa-arrow-right ms-3"></i></a>
+        <a href="https://forms.gle/sdE5W9wTkpsZLwPZ9" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" target="_blank">Make a request<i class="fa fa-arrow-right ms-3"></i></a>
     </div>
 </nav>

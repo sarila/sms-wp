@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-  --primary: #2D4A79;
+  --primary: #2d4a79;
   --light: #f0fbfc;
   --dark: #181d38;
 }
@@ -48,7 +48,7 @@
 }
 
 .how-it-works-btn {
-  color: #2D4A79;
+  color: #2d4a79;
 }
 
 .how-it-works-btn:hover {
@@ -217,10 +217,10 @@
 }
 
 /* hero page  */
-.hero_image {
+/* .hero_image {
   border-bottom: 2px solid #ffa500;
   padding-bottom: 5px;
-}
+} */
 
 /*** Section Title ***/
 .section-title {
@@ -294,17 +294,28 @@
 
 .hero_container .hero_image_wrapper {
   display: flex;
+  flex-wrap: 1;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero_container .hero_image_wrapper {
+    padding: 10px 5px;
+    border: 1px solid red;
+  }
 }
 .hero_container .hero_image_wrapper img {
-  height: 300px;
-  width: 400px;
-  clip-path: content-box;
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid green; */
+  border-radius: 4px;
+  /* clip-path: content-box;
   clip-path: fill-box;
   clip-path: stroke-box;
-  clip-path: view-box;
-  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  clip-path: view-box; */
+  /* clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); */
 }
 
 .hero_container .hero_button_wrapper {
@@ -388,7 +399,6 @@
 }
 .hero_section_wrapper .hero_section_left .title_paragraph h2 {
   font-size: 20px;
-  text-transform: capitalize;
   color: #2d4a79;
 }
 
@@ -728,7 +738,7 @@
   /* border: 2px solid blue; */
   margin: 20px 0px;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
 }
 
@@ -747,11 +757,12 @@
 }
 
 .blog_container .blog_wrapper .blog .blog_image {
-  height: 200px;
+  height: 220px;
   width: 100%;
+  display: flex;
+  object-fit: cover;
   overflow: hidden;
-  /* border: 2px solid black; */
-  border-radius: 8px;
+  /* border-radius: 8px; */
 }
 .blog_container .blog_wrapper .blog .blog_image img {
   height: 100%;
@@ -804,7 +815,7 @@
   }
 
   .blog_container .blog_wrapper {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   /* hero section css end */
@@ -817,7 +828,7 @@
   }
 
   .status_div_wrapper {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
   }
   .status_container {
     padding: 40px 30px;
