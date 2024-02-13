@@ -5,15 +5,63 @@
 
 <div class="hero_container">
     <div class="hero_image_wrapper">
-        <img class="hero_image" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/heroimage.JPG" alt="student_image">
+
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1">
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3">
+                </button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4">
+                </button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="hero_image"
+                        src="<?php echo get_template_directory_uri() ?>/includes/assets/img/heroimage.JPG"
+                        alt="student_image">
+                </div>
+                <div class="carousel-item">
+                    <img class="hero_image"
+                        src="<?php echo get_template_directory_uri() ?>/includes/assets/img/public.JPG"
+                        alt="student_image">
+                </div>
+
+                <div class="carousel-item">
+                    <img class="hero_image"
+                        src="<?php echo get_template_directory_uri() ?>/includes/assets/img/governmentschool.JPG"
+                        alt="student_image">
+                </div>
+                <div class="carousel-item">
+                    <img class="hero_image"
+                        src="<?php echo get_template_directory_uri() ?>/includes/assets/img/blog2.JPG"
+                        alt="student_image">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
     <div class="hero_button_wrapper">
         <div>
-            <h1><span style="color: #2d4a79"> For every </span> <span style="color: #ffa500">STUDENT</span><span style="color: #2d4a79">,
+            <h1><span style="color: #2d4a79"> For every </span> <span style="color: #ffa500">STUDENT</span><span
+                    style="color: #2d4a79">,
                     every</span> <span style="color: #ffa500">TEACHER</span><span style="color: #2d4a79">, and
                 </span> <span style="color: #ffa500">PARENT</span><span style="color: #2d4a79">.</span></h1>
-            <p> A report can be done by students, teachers, parents, youths, organizations, and the people from local
-                community. This report cover a wind range of topics concerning the school, such as aspects related to
+            <p> A report can be done by students, teachers, parents, youths, organizations, and the people from
+                local
+                community. This report cover a wind range of topics concerning the school, such as aspects related
+                to
                 infrastructure, science lap, computer lap, the library, sports, and more.</p>
         </div>
         <div class="button_wrapper">
@@ -37,7 +85,8 @@
     <div class="hero_section_left">
         <div class="title_paragraph">
             <h2>Explore the budgets of public schools</h2>
-            <p>The annual budget allocation for each government school varies according to the specific requirements of
+            <p>The annual budget allocation for each government school varies according to the specific requirements
+                of
                 the school.</p>
         </div>
         <div class="budgets_wrapper" id="budget">
@@ -160,11 +209,14 @@
                 This pie chart illustrates the frequency of reports received from our stakeholders regarding various
                 aspects of schools, including the library, computer lab, science lab, toilets, and more.
             </p>
-            <button class="view_detail_btn"><a class="text-white font-weight-bold" href="https://lookerstudio.google.com/embed/u/0/reporting/ffcf76e8-acbf-410e-979a-7eb25987a0e3/page/r5NjD">View
+            <button class="view_detail_btn"><a class="text-white font-weight-bold"
+                    href="https://lookerstudio.google.com/embed/u/0/reporting/ffcf76e8-acbf-410e-979a-7eb25987a0e3/page/r5NjD">View
                     in detail</a></button>
         </div>
         <div class="img_wrapper">
-            <iframe src="https://lookerstudio.google.com/embed/u/0/reporting/ffcf76e8-acbf-410e-979a-7eb25987a0e3/page/r5NjD" width="600" height="400" style="border:none;">
+            <iframe
+                src="https://lookerstudio.google.com/embed/u/0/reporting/ffcf76e8-acbf-410e-979a-7eb25987a0e3/page/r5NjD"
+                width="600" height="400" style="border:none;">
             </iframe>
 
         </div>
@@ -223,7 +275,8 @@
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <div class="text-center wow fadeInUp pb-4" data-wow-delay="0.1s">
-                <h2 class="section-title bg-white text-center text-primary px-3" style="font-size: 24px">Unveiling the
+                <h2 class="section-title bg-white text-center text-primary px-3" style="font-size: 24px">Unveiling
+                    the
                     Beneficiaries of Our Platform</h2>
                 <p style="font-size: 16px" class="pt-2">Our Platform's Wide Reach: Empowering over 34,368 Nepalese
                     Government Schools, Monitoring Yearly Milestones, Assisting News Officials in Reporting Annual
@@ -235,8 +288,11 @@
                 <div class="row g-3">
                     <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                         <a class="position-relative d-block overflow-hidden" href="">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/governmentschool.JPG" style="height: 350px; width: 100%; object-fit: cover" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                            <img class="img-fluid"
+                                src="<?php echo get_template_directory_uri() ?>/includes/assets/img/governmentschool.JPG"
+                                style="height: 350px; width: 100%; object-fit: cover" alt="">
+                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                style="margin: 1px;">
                                 <small class="text-primary">34k +</small>
                                 <h5 class="m-0">School Students</h5>
                             </div>
@@ -244,8 +300,11 @@
                     </div>
                     <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                         <a class="position-relative d-block overflow-hidden" href="">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/Map_of_nepalese_provinces_by_population.png" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                            <img class="img-fluid"
+                                src="<?php echo get_template_directory_uri() ?>/includes/assets/img/Map_of_nepalese_provinces_by_population.png"
+                                alt="">
+                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                style="margin: 1px;">
                                 <small class="text-primary">7</small>
                                 <h5 class="m-0">Provinces</h5>
                             </div>
@@ -253,8 +312,10 @@
                     </div>
                     <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                         <a class="position-relative d-block overflow-hidden" href="">
-                            <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/cat-3.jpg" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                            <img class="img-fluid"
+                                src="<?php echo get_template_directory_uri() ?>/includes/assets/img/cat-3.jpg" alt="">
+                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                style="margin: 1px;">
                                 <small class="text-primary">50 +</small>
                                 <h5 class="m-0">News Channels</h5>
                             </div>
@@ -264,7 +325,10 @@
             </div>
             <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
                 <a class="position-relative d-block h-100 overflow-hidden" href="">
-                    <img class="img-fluid position-absolute w-100 h-100" style="height: 350px; width: 100%; object-fit: cover" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/public.JPG" alt="" style="height: auto; width: 100%; object-fit: cover" style="object-fit: cover;">
+                    <img class="img-fluid position-absolute w-100 h-100"
+                        style="height: 350px; width: 100%; object-fit: cover"
+                        src="<?php echo get_template_directory_uri() ?>/includes/assets/img/public.JPG" alt=""
+                        style="height: auto; width: 100%; object-fit: cover" style="object-fit: cover;">
                     <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
                         <small class="text-primary">2 Millions +</small>
                         <h5 class="m-0">Public</h5>
@@ -289,7 +353,8 @@
     <div class="blog_wrapper">
         <div class="blog">
             <div class="blog_image">
-                <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/blog2.JPG" alt="">
+                <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/includes/assets/img/blog2.JPG"
+                    alt="">
             </div>
             <div class="blog_detail">
                 <h3><a href="#">Workshop on design thinking, internet safety, and financial management
